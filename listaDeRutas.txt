@@ -1,0 +1,64 @@
+
+  GET|HEAD  / ................................................................................................................................................................................................... 
+  GET|HEAD  CarlosPrivado ....................................................................................................................................................................................... 
+  GET|HEAD  admin ................................................................................................................................... filament.admin.pages.dashboard › Filament\Pages › Dashboard
+  GET|HEAD  admin/location-settings ................................................................................... filament.admin.pages.location-settings › TomatoPHP\FilamentSettingsHub › LocationSettings
+  GET|HEAD  admin/login ...................................................................................................................................... filament.admin.auth.login › Filament\Pages › Login
+  POST      admin/logout .......................................................................................................................... filament.admin.auth.logout › Filament\Http › LogoutController
+  GET|HEAD  admin/menus ............................................................................................................ filament.admin.resources.menus.index › TomatoPHP\FilamentMenus › ManageMenus
+  GET|HEAD  admin/menus/create .................................................................................................... filament.admin.resources.menus.create › TomatoPHP\FilamentMenus › CreateMenus
+  GET|HEAD  admin/menus/{record} ...................................................................................................... filament.admin.resources.menus.edit › TomatoPHP\FilamentMenus › EditMenus
+  GET|HEAD  admin/pages ............................................................................................................. filament.admin.resources.pages.index › Z3d0X\FilamentFabricator › ListPages
+  GET|HEAD  admin/pages/create .................................................................................................... filament.admin.resources.pages.create › Z3d0X\FilamentFabricator › CreatePage
+  GET|HEAD  admin/pages/{record}/edit ................................................................................................. filament.admin.resources.pages.edit › Z3d0X\FilamentFabricator › EditPage
+  GET|HEAD  admin/settings-hub .................................................................................................. filament.admin.pages.settings-hub › TomatoPHP\FilamentSettingsHub › SettingsHub
+  GET|HEAD  admin/shield/roles ............................................................................................ filament.admin.resources.shield.roles.index › BezhanSalleh\FilamentShield › ListRoles
+  GET|HEAD  admin/shield/roles/create ................................................................................... filament.admin.resources.shield.roles.create › BezhanSalleh\FilamentShield › CreateRole
+  GET|HEAD  admin/shield/roles/{record} ..................................................................................... filament.admin.resources.shield.roles.view › BezhanSalleh\FilamentShield › ViewRole
+  GET|HEAD  admin/shield/roles/{record}/edit ................................................................................ filament.admin.resources.shield.roles.edit › BezhanSalleh\FilamentShield › EditRole
+  GET|HEAD  admin/simple-pages ................................................................................... filament.admin.resources.simple-pages.index › Tobiasla78\FilamentSimplePages › ListSimplePages
+  GET|HEAD  admin/simple-pages/create .......................................................................... filament.admin.resources.simple-pages.create › Tobiasla78\FilamentSimplePages › CreateSimplePage
+  GET|HEAD  admin/simple-pages/{record}/edit ....................................................................... filament.admin.resources.simple-pages.edit › Tobiasla78\FilamentSimplePages › EditSimplePage
+  GET|HEAD  admin/simpleCMS/{slug} .......................................................................................... filament.admin.pages.simpleCMS.{slug} › Tobiasla78\FilamentSimplePages › SimplePage
+  GET|HEAD  admin/site-settings ............................................................................................... filament.admin.pages.site-settings › TomatoPHP\FilamentSettingsHub › SiteSettings
+  GET|HEAD  admin/social-menu-settings ........................................................................... filament.admin.pages.social-menu-settings › TomatoPHP\FilamentSettingsHub › SocialMenuSettings
+  GET|HEAD  admin/users .............................................................................................................. filament.admin.resources.users.index › TomatoPHP\FilamentUsers › ListUsers
+  GET|HEAD  admin/users/create ..................................................................................................... filament.admin.resources.users.create › TomatoPHP\FilamentUsers › CreateUser
+  GET|HEAD  admin/users/{record}/edit .................................................................................................. filament.admin.resources.users.edit › TomatoPHP\FilamentUsers › EditUser
+  GET|HEAD  carlos .............................................................................................................................................................................................. 
+  GET|HEAD  confirm-password ......................................................................................................................... password.confirm › Auth\ConfirmablePasswordController@show
+  POST      confirm-password ........................................................................................................................................... Auth\ConfirmablePasswordController@store
+  POST      email/verification-notification .............................................................................................. verification.send › Auth\EmailVerificationNotificationController@store
+  GET|HEAD  filament/exports/{export}/download .................................................................................................... filament.exports.download › Filament\Actions › DownloadExport
+  GET|HEAD  filament/imports/{import}/failed-rows/download .................................................................. filament.imports.failed-rows.download › Filament\Actions › DownloadImportFailureCsv
+  GET|HEAD  forgot-password .......................................................................................................................... password.request › Auth\PasswordResetLinkController@create
+  POST      forgot-password ............................................................................................................................. password.email › Auth\PasswordResetLinkController@store
+  GET|HEAD  francisco ........................................................................................................................................................................................... 
+  GET|HEAD  gabriel ............................................................................................................................................................................................. 
+  GET|HEAD  gabrielprivado ...................................................................................................................................................................................... 
+  GET|HEAD  livewire/livewire.js .................................................................................................................... Livewire\Mechanisms › FrontendAssets@returnJavaScriptAsFile
+  GET|HEAD  livewire/livewire.min.js.map .............................................................................................................................. Livewire\Mechanisms › FrontendAssets@maps
+  GET|HEAD  livewire/preview-file/{filename} ........................................................................................... livewire.preview-file › Livewire\Features › FilePreviewController@handle
+  POST      livewire/update ................................................................................................................. livewire.update › Livewire\Mechanisms › HandleRequests@handleUpdate
+  POST      livewire/upload-file ......................................................................................................... livewire.upload-file › Livewire\Features › FileUploadController@handle
+  POST      login ..................................................................................................................................................... Auth\AuthenticatedSessionController@store
+  GET|HEAD  login/{destino?} ................................................................................................................................. login › Auth\AuthenticatedSessionController@create
+  POST      logout ......................................................................................................................................... logout › Auth\AuthenticatedSessionController@destroy
+  GET|HEAD  logout/{destino?} ............................................................................................................................................................................ Logout
+  GET|HEAD  paginaPersonal/{nombre} ............................................................................................................................................................................. 
+  PUT       password ........................................................................................................................................... password.update › Auth\PasswordController@update
+  GET|HEAD  profile ....................................................................................................................................................... profile.edit › ProfileController@edit
+  PATCH     profile ................................................................................................................................................... profile.update › ProfileController@update
+  DELETE    profile ................................................................................................................................................. profile.destroy › ProfileController@destroy
+  GET|HEAD  register ............................................................................................................................................ register › Auth\RegisteredUserController@create
+  POST      register ........................................................................................................................................................ Auth\RegisteredUserController@store
+  POST      reset-password .................................................................................................................................... password.store › Auth\NewPasswordController@store
+  GET|HEAD  reset-password/{token} ........................................................................................................................... password.reset › Auth\NewPasswordController@create
+  GET|HEAD  simpleCMS/{slug?} ................................................................................................................................................................................... 
+  GET|HEAD  up .................................................................................................................................................................................................. 
+  GET|HEAD  verify-email ........................................................................................................................... verification.notice › Auth\EmailVerificationPromptController
+  GET|HEAD  verify-email/{id}/{hash} ........................................................................................................................... verification.verify › Auth\VerifyEmailController
+  GET|HEAD  {filamentFabricatorPage?} ................................................................................................................................. Z3d0X\FilamentFabricator › PageController
+
+                                                                                                                                                                                              Showing [60] routes
+

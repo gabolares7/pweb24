@@ -1,0 +1,61 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria Italic, serif;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #171717;
+    padding: 25px;
+    text-align: center;
+    color: white !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: ghostwhite;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; /* Espacio entre los enlaces */
+    font-size: 20px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    transition:  0.3s ease;
+}
+
+/* Pie de página */
+footer {
+    background-color: #171717;
+    padding: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+footer img {
+    max-width: 25%;
+}
+
+footer p {
+    font-size: 20px;
+    margin-right: 30px;
+}
+

@@ -1,0 +1,79 @@
+body {
+    font-family: Cambria Italic, serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)),
+    url('/storage/images/fondo_trabajo.avif') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.member-container {
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.member {
+    background-color: #fbf6ef;
+    border-radius: 3px;
+    padding: 20px;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.member:hover {
+    transform: scale(1.05);
+}
+
+.member img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.member h2 {
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.member p {
+    color: #333333;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+a.button {
+    margin-top: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #232323FF;
+    color: #ffffff;
+}
+
+a.button:hover {
+    transition: background-color 0.3s ease, border 0.3s ease;
+    background-color: #878787FF;
+    color: #ffffff;
+}

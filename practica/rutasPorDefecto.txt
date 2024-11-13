@@ -1,0 +1,81 @@
+1. Ruta de Inicio (/)
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Función: Define la ruta raíz (/), que devuelve la vista welcome cuando los usuarios visitan la página principal del sitio.
+Ubicación de la vista: Esta vista welcome está en resources/views/welcome.blade.php. 
+
+2. Ruta de Cierre de Sesión con Parámetro Opcional (/logout/{destino?})
+
+Route::get('/logout/{destino?}', function ($destino = 'home') {
+    auth()->logout();
+    session()->invalidate();
+    session()->regenerateToken();
+    $destino='/'.$destino;
+    return redirect( $destino );
+})->where('destino', '.*')->name('Logout');
+
+Función: Esta ruta se usa para cerrar la sesión del usuario.
+Parámetro Opcional: El parámetro destino es opcional y por defecto es 'home'. Este parámetro especifica a qué página redirigir al usuario después de cerrar la sesión.
+Acciones:
+Se llama a auth()->logout() para cerrar la sesión del usuario.
+Se invalidan y regeneran los tokens de sesión para mayor seguridad.
+Luego, el usuario es redirigido a la ruta especificada en destino.
+Restricción de la Ruta: La función where('destino', '.*') permite que cualquier valor de destino sea capturado.
+
+3. Ruta Comentada del Dashboard
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+Esta ruta ha sido comentada, lo que significa que está desactivada por el momento.
+Si estuviera activa, proporcionaría acceso al dashboard de la aplicación, pero solo a usuarios autenticados y verificados, gracias a los middlewares auth y verified.
+
+4. Ruta Dinámica para un CMS Simple (/simpleCMS/{slug?})
+
+Route::get('/simpleCMS/{slug?}', function ($slug = 'home') {
+    if ($slug == null) { $slug = 'home'; }
+    $page = \Tobiasla78\FilamentSimplePages\Models\SimplePage::where('slug', $slug)->first();
+    if (!$page) {
+        abort(404);
+    }
+    if (!$page->is_public) {
+        abort(403);
+    }
+    return view('vendor/filament-simple-pages/simpleCMS-page', compact('page'));
+})->where('slug', '.*');
+
+Función: Esta ruta maneja el sistema de gestión de contenido (CMS) dinámico en la aplicación.
+Parámetro Opcional: El parámetro slug es opcional, y si no se proporciona, toma el valor 'home'.
+Lógica:
+Se busca una página en la base de datos usando el modelo SimplePage y el valor de slug.
+Si no se encuentra la página, se muestra un error 404 con abort(404).
+Si la página no es pública, se muestra un error 403 con abort(403).
+Si la página existe y es pública, se devuelve la vista 'vendor/filament-simple-pages/simpleCMS-page', pasando la variable page a la vista.
+Restricción de la Ruta: where('slug', '.*') permite capturar cualquier valor como slug.
+
+5. Grupo de Rutas Protegidas por Autenticación (auth)
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Función: Este grupo de rutas está protegido por el middleware auth, lo que significa que solo los usuarios autenticados pueden acceder a ellas.
+Rutas dentro del grupo:
+GET /profile: Muestra el formulario de edición de perfil (ProfileController::edit).
+PATCH /profile: Actualiza el perfil del usuario (ProfileController::update).
+DELETE /profile: Elimina el perfil del usuario (ProfileController::destroy).
+
+
+6. Archivo de Autenticación
+
+Función: Importa el archivo auth.php, que contiene todas las rutas relacionadas con el sistema de autenticación de Laravel (como el registro, inicio de sesión, restablecimiento de contraseñas, etc.).
+
+
+
+
